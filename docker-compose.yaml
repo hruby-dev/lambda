@@ -28,6 +28,12 @@ services:
     ports:
       - "4001:4444"
     restart: unless-stopped
+  gr3pp1ng:
+    build: ./reverse-engineering/gr3pp1ng
+    container_name: gr3pp1ng
+    volumes:
+      - handout:/handout
+    restart: unless-stopped
 
 volumes:
   handout:
